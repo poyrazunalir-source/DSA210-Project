@@ -1,62 +1,124 @@
-# DSA210-Project
-Data science project for DSA210: Digital habits &amp; productivity
-# Impact of iPhone Notifications on Focus & Mood
+# DSA210-Project  
+Data science project for DSA210: Digital habits & productivity
 
-## Motivation
-Smartphones send frequent notifications which may reduce attention span and impact emotional well-being. I want to analyze how my daily iPhone notifications affect my productivity and mood. The goal is to understand digital habits and identify whether notification frequency has a measurable effect on my focus.
+## Impact of iPhone Notifications on Focus, Mood & Productivity
+
+### Motivation
+Smartphones constantly send notifications and these interruptions may negatively affect attention span, productivity, and emotional well-being. I want to analyze how my daily iPhone notifications relate to my productivity and mood. The goal is to understand my digital habits and see if notification frequency truly affects how I feel and work throughout the day.
+
+---
 
 ## Data Source
-All data will be collected manually from my personal device (iPhone running iOS 18.5).
+All data is collected manually from my personal iPhone (iOS 18.5).
 
 | Data | Source |
-|---|---|
-Daily notification count | Settings → Screen Time → See All Activity → Notifications |
-Daily pickups (optional) | Settings → Screen Time |
-Productivity score (1–10) | Self-logged |
-Mood score (1–5) | Self-logged |
-Notes (optional) | Short context notes per day |
+|------|--------|
+| Daily notification count | Settings → Screen Time → See All Activity → Notifications |
+| Daily pickups | Settings → Screen Time |
+| Productivity score (1–10) | Self-logged |
+| Mood score (1–5) | Self-logged |
+| Notes (optional) | Daily notes for context |
+
+---
 
 ## Data Collection Plan
-I will collect data for approximately 14 days. Each night I will record:
+I will collect data for **at least 14 days**, and continue gathering more data until the final project submission to increase statistical strength.
 
-- Total number of notifications from iOS Screen Time
-- Productivity score (1–10)
-- Mood score (1–5)
-- (Optional) Daily phone pickups
+Each night I record:
+- Total number of notifications  
+- Phone pickups  
+- Productivity score (1–10)  
+- Mood score (1–5)  
+- Optional notes  
 
-Data will be stored in a spreadsheet and exported to CSV for analysis.
+Data is stored in a CSV file (`data.csv`) for analysis.
 
-## Planned Analysis
-- Exploratory Data Analysis (EDA)
-- Summary statistics
-- Time-series visualization
-- Correlation analysis between:
-  - Notifications and productivity
-  - Notifications and mood
-- Hypothesis testing
-- (Optional) Linear regression model to predict productivity based on notification count
+---
+
+## Research Questions & Hypotheses
+
+### 1. Notifications → Productivity
+- **H₀:** Notifications do not affect productivity.  
+- **H₁:** Higher notification counts are associated with lower productivity.
+
+### 2. Notifications → Mood
+- **H₀:** Notifications do not affect mood.  
+- **H₁:** More notifications are associated with worse mood.
+
+### 3. Pickups → Productivity (additional feature)
+- **H₀:** Phone pickups do not affect productivity.  
+- **H₁:** More pickups are associated with lower productivity.
+
+These hypotheses will be tested using correlation analysis and simple regression methods.
+
+---
+
+## Planned Exploratory Data Analysis (EDA)
+
+### Summary statistics
+- Mean, median, min/max, standard deviation  
+- Distributions of notifications, mood, productivity, and pickups  
+
+### Visualizations
+- Daily notifications line chart  
+- Productivity & mood over time  
+- Scatter plots:
+  - Notifications vs Productivity  
+  - Notifications vs Mood  
+  - Pickups vs Productivity  
+- Correlation heatmap (notifications, pickups, productivity, mood)
+
+These help understand patterns and relationships before applying statistical tests.
+
+---
+
+## Hypothesis Testing Plan
+
+### 1. Pearson Correlation
+For approximately continuous variables (notifications, pickups, productivity).
+
+### 2. Spearman Rank Correlation
+For ordinal or non-normal variables (mood, productivity).
+
+### 3. Simple Linear Regression
+
+**Model:**
+productivity = beta_0 + beta_1 * notifications + error
+
+**Evaluation:**
+- Regression slope (direction of effect)  
+- R² value (explained variance)  
+- p-value (significance)  
+
+---
 
 ## Tools
-- Python
-  - pandas
-  - numpy
-  - matplotlib / seaborn
-- Jupyter Notebook
-- Google Sheets / CSV
+- Python  
+- pandas, numpy  
+- matplotlib, seaborn  
+- scipy  
+- scikit-learn  
+- Jupyter Notebook  
+
+All analysis is done in `analysis.ipynb`.
+
+---
 
 ## Goal
-Determine whether higher iPhone notification frequency is associated with lower productivity and worse mood, and gain insight into personal digital behavior patterns.
+Determine whether higher notification frequency and phone usage patterns are associated with lower productivity and worse mood, and gain insight into my personal digital behavior.
+
+---
 
 ## Future Work
-- Include phone pickup frequency as an additional variable
-- Analyze notification categories (social vs productivity apps)
-- Test digital well-being interventions such as Focus Mode days
+- Analyze notification categories (e.g., social, messaging, productivity)  
+- Compare Focus Mode days vs normal days  
+- Include screen time as an additional feature  
+- Try more advanced models (e.g., multiple regression)  
 
-## Notes
-This submission is the project proposal. Data collection will begin after the proposal deadline, following the course timeline.
+---
 
 ## AI Assistance Disclosure
-
-I used AI (ChatGPT) only to help format the README in Markdown and understand how the preview design works. No other parts of the project have been assisted by AI at this stage.
+AI (ChatGPT) was used to help format this README and prepare the analysis structure.  
+All data collection and final analysis will be done by me.
 
 
