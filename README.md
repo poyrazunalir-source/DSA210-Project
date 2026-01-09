@@ -45,7 +45,7 @@ Most days fall between **4–6 hours**, indicating moderate but consistent phone
 ### Notifications vs Productivity
 This scatter plot explores the relationship between notification frequency and productivity.
 
-![Notifications vs Productivity](figures/notifications_vs_productivity.png)
+![Notifications vs Productivity](DSA210-Project/figures/notifications_vs_productivity.png)
 
 A **negative trend** is visible, suggesting that higher notification counts are often associated with lower productivity.
 
@@ -54,7 +54,7 @@ A **negative trend** is visible, suggesting that higher notification counts are 
 ### Time Series: Screen Time & Productivity
 This visualization compares screen time and productivity over time.
 
-![Time Series](figures/timeseries_screen_productivity.png)
+![Time Series](DSA210-Project/figures/timeseries_screen_productivity.png)
 
 The plot suggests a generally **inverse relationship**: periods of higher screen time often correspond to lower productivity, although daily variability exists.
 
@@ -85,7 +85,7 @@ A **Linear Regression** model was used to predict productivity.
 The model achieves a meaningful R² score, indicating that smartphone usage metrics explain part of the variance in productivity.
 
 #### Predicted vs Actual Productivity
-![Predicted vs Actual](figures/predicted_vs_actual.png)
+![Predicted vs Actual](DSA210-Project/figures/predicted_vs_actual.png)
 
 The plot shows that the model captures the general trend, although prediction errors remain due to limited data size and external factors.
 
