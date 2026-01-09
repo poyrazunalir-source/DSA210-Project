@@ -36,7 +36,7 @@ All variables are stored as **integers**.
 ### Screen Time Distribution
 This histogram shows how daily screen time is distributed across the 50-day period.
 
-![Screen Time Histogram](figures/screen_time_hist.png)
+![Screen Time Histogram](DSA210-Project/figures/screen_time_hist.png)
 
 Most days fall between **4–6 hours**, indicating moderate but consistent phone usage.
 
